@@ -2,15 +2,15 @@
 
 ### 1. RISC-V Assembly questions
 #### 1) Which registers contain arguments to functions? For example, which register holds 13 in main's call to printf?
- 
+
 a0 – a7 레지스터가 Function arguments 역할을 한다.
-13은 li(load immediate) a2, 13 이므로 a2 레지스터에 들어 있다.
+13은 li(load immediate) a2, 13 이므로 a2 레지스터에 들어 있다.  
 
 #### 2) Where is the function call to f from main? Where is the call to g? (Hint: the compiler may inline functions.)
  
 f함수는 li a2,13에서 호출된다.
 g함수는 f함수 내의 return g(x);에서 호출되므로
-addiw a0,a0,3에서 처음으로 호출된다.
+addiw a0,a0,3에서 처음으로 호출된다.  
 
 #### 3) At what address is the function printf located?
  
@@ -18,10 +18,10 @@ Call.asm에서는 주소 650에 printf가 위치한 것을 볼 수 있다.
  
 Main을 봤을 때, 
 auipc	ra, 0x0		->  ra == 0x30
-jalr	1568(ra)		->  0x30 + 1568 = 1616 = 0x650
+jalr	1568(ra)		->  0x30 + 1568 = 1616 = 0x650  
 
 #### 4) What value is in the register ra just after the jalr to printf in main?
-jalr 당시의 PC가 34이므로, 34 + 4인 38을 ra에 저장한다.
+jalr 당시의 PC가 34이므로, 34 + 4인 38을 ra에 저장한다.  
 
 ### 2. uthread
 
