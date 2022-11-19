@@ -1,3 +1,5 @@
+## OS HW1 - Unix Utilities
+
 ### 1. Sleep
 main함수의 parameter로 sleep과 정수형태의 문자열을 받습니다. 만약 parameter의 개수가 2개가 아닐 경우, 오류를 출력합니다. Argv의 index 1에 들어 있는 문자열을 정수로 사용하기 위해, atoi 함수를 사용하여 문자열을 정수로 변환시켜줍니다. 변환시킨 정수 틱 만큼 syscall sleep을 호출하여 사용한 후 main함수를 종료합니다.
 
